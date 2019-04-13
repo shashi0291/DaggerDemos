@@ -1,5 +1,6 @@
 package com.example.i702839.daggerdemos.di;
 
+import com.example.i702839.daggerdemos.MainActivity;
 import com.example.i702839.daggerdemos.model.Car;
 
 import dagger.Component;
@@ -12,4 +13,6 @@ import dagger.Component;
 public interface CarComponent {
 
     Car getCar();
+
+    void inject(MainActivity mainActivity);
 }

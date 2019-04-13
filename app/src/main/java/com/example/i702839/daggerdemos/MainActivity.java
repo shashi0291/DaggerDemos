@@ -4,11 +4,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.i702839.daggerdemos.di.CarComponent;
+import com.example.i702839.daggerdemos.di.DaggerCarComponent;
 import com.example.i702839.daggerdemos.model.Car;
+
+import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
 
-    Car car;
+    @Inject
+    Car car; // Field injection
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CarComponent carComponent = DaggerCarComponent.create();
-        car = carComponent.getCar();
+        //car = carComponent.getCar();
+        carComponent.inject(this);
         car.drive();
     }
 }
