@@ -21,6 +21,12 @@ public class Car {
         this.engine = engine;
     }
 
+
+    @Inject
+    public void enableRemote(Remote remote) {
+        remote.setListener(this);
+    }
+
     public void drive() {
         Log.d(TAG, "Driving started...");
     }
