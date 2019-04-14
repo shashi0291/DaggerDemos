@@ -1,5 +1,7 @@
 package com.example.i702839.daggerdemos.model;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 /**
@@ -12,5 +14,6 @@ public class Engine {
 
     @Inject
     public Engine() {
+        Log.d(TAG, "Engine: Inside engine");
     }
 }

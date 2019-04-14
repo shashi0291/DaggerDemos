@@ -14,7 +14,7 @@ public class Remote {
 
     @Inject
     public Remote () {
-
+        Log.d(TAG, "Remote: Inside remote");
     }
 
     public void setListener(Car car) {

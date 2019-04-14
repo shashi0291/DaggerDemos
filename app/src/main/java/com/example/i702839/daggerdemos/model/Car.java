@@ -13,12 +13,12 @@ public class Car {
     private static final String TAG = "Car";
 
     Wheel wheel;
-    Engine engine;
+    @Inject Engine engine;
+    @Inject WheelsInsideAnotherLibrary wheelsInsideAnotherLibrary;
 
     @Inject
-    public Car(Wheel wheel, Engine engine) {
+    public Car(Wheel wheel) {
         this.wheel = wheel;
-        this.engine = engine;
     }
 
 
